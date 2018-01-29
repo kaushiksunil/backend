@@ -15,12 +15,12 @@ app.post('/registerUser', function (req, res) {
     var haspass = encript(data.password);
  
         data = {
-            first_name: data.fname,
-            user_token: userToken,
-            user_email: data.email,
-            user_name: data.username,
-            user_password: haspass
-            };
+                first_name: data.fname,
+                user_token: userToken,
+                user_email: data.email,
+                user_name: data.username,
+                user_password: haspass
+                };
         user.registerUser(data, function (err, info) {
             if (err) throw err;
         res.json(data);

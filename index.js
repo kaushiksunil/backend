@@ -1,8 +1,9 @@
 var express = require('express');
 //var mysql = require('mysql');
 var bodyParseer = require('body-parser');
- 
 var app = express();
+
+var port = process.env.PORT || 3000;
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -19,7 +20,7 @@ app.use(bodyParseer.urlencoded({extended:false}));
 app.use('/', express.static(__dirname));
 app.use(require('./api/user_api'));
 
-app.listen(3000);
+app.listen(port);
 
 
 //app.post('/registerUser',(req,res)=>{
