@@ -24,6 +24,7 @@ app.post('/registerUser', function (req, res) {
         user.registerUser(data, function (err, info) {
             if (err) throw err;
         res.json(data);
+        console.log("one recorded")
         res.end();
 //      user.sendResponse(true, res);
 //      console.log(res);
@@ -32,7 +33,7 @@ app.post('/registerUser', function (req, res) {
 
 app.post('/userActive', (req, res)=>{
     var registerUserInfo = req.body.user_token;
-//    console.log(registerUserInfo);
+   console.log(registerUserInfo);
     var data ={
         user_token: registerUserInfo,
         user_active: 1
