@@ -3,7 +3,7 @@ var express = require('express');
 var bodyParseer = require('body-parser');
 var app = express();
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8080;
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
